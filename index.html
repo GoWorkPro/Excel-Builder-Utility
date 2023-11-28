@@ -1,9 +1,15 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Excel Builder </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <style>
-        body{
-            font-family:Arial
+        body {
+            font-family: Arial
         }
+
         code {
             white-space: pre-wrap;
             font-family: 'Courier New', monospace;
@@ -55,24 +61,54 @@
             font-weight: bold;
             cursor: pointer
         }
-        .highlight-brace{
-            font-weight:bolder;
-            font-size:20px;
-            color:lightgray
+
+        .highlight-brace {
+            font-weight: bolder;
+            font-size: 20px;
+            color: lightgray
         }
 
-        .highlight-dot{
-            font-weight:bold;
-            color:#92c8ef
+        .highlight-dot {
+            font-weight: bold;
+            color: #92c8ef
         }
 
         .highlight-comment {
             color: #449D4A
         }
+
+        p {
+            margin-top: 10px;
+        }
+
+        h1 {
+            margin-top: 20px
+        }
     </style>
 </head>
 <body>
-    <div>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="excel-icon.png" width="40" /> ExcelBuilder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="description.html">Documentation</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    by &nbsp;<a target="_blank" class="text-primary text-decoration-none fw-bold" href="https://goworkpro.com">GoWorkPro</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-3">
         <h1>
             Example #1:
         </h1>
@@ -105,7 +141,7 @@
         <p>
             This code creates an Excel table with header and data rows and saves it to a file named "DataTableToExcel-1-Simple-Customer-Report.xlsx". The ExcelBuilder utility simplifies the process of creating Excel sheets, making it easy to generate structured reports.
         </p>
-        <h1>
+        <h1 class="mt-4">
             Example #2:
         </h1>
         <div class="img">
@@ -531,5 +567,16 @@
             }
         </script>
     </div>
+    <footer class="mt-5">
+        <div class="navbar navbar-expand-lg bg-body-tertiary p-4">
+            <div class="container">
+                <div>
+                    © 2023 <a href="https://goworkpro.com"> GoWorkPro</a>. All rights reserved. ExcelBuilder is a trademark of GoWorkPro. Unauthorized use or reproduction of this software is prohibited.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>
