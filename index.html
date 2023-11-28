@@ -17,25 +17,29 @@
             display: block;
             color: white;
             border-radius: 10px;
-            padding: 10px
+            padding: 20px 40px;
+            text-wrap: nowrap!important;
+            overflow-x: auto;
+            white-space:pre-line;
             /* Add any other styling you want */
         }
 
         .img {
             text-align: center;
-            margin-block: 30px
+            margin-block: 30px;
         }
 
             .img img {
                 max-width: 800px;
                 border-radius: 5px;
                 box-shadow: 0 0 10px 10px #e1dede;
-                cursor: pointer
+                cursor: pointer;
+                max-width: 100%
             }
 
                 .img img:hover {
                     transition: 0.4s ease-in-out;
-                    transform: scale(1.4);
+                    transform: scale(1.1);
                 }
 
         .highlight {
@@ -89,17 +93,23 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="excel-icon.png" width="40" /> ExcelBuilder</a>
+            <a class="navbar-brand" href="index.html"><img src="excel-icon.png" width="40" /> ExcelBuilder</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Examples</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Examples</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="description.html">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.nuget.org/packages/GoWorkPro.ExcelBuilder/">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="donate-us.html">Donate Us</a>
                     </li>
                 </ul>
                 <span class="navbar-text">
@@ -131,11 +141,11 @@
             // Build the Excel file using ExcelBuilder
             using (var excelBuilder = ExcelBuilder.Datasets(simpleexcelTable).Build())
             {
-            // Specify the file path where you want to save the Excel file
-            string filePath = "DataTableToExcel-1-Simple-Customer-Report.xlsx";
+            &nbsp;&nbsp; // Specify the file path where you want to save the Excel file
+            &nbsp;&nbsp; string filePath = "DataTableToExcel-1-Simple-Customer-Report.xlsx";
 
-            // Save the Excel file
-            excelBuilder.SaveAsFile(filePath);
+            &nbsp;&nbsp; // Save the Excel file
+            &nbsp;&nbsp; excelBuilder.SaveAsFile(filePath);
             }
         </code>
         <p>
@@ -191,9 +201,9 @@
 
             using (var d = ExcelBuilder.Datasets(excelTable).Build())
             {
-            // Specify the file path where you want to save the Excel file
-            string filePath = "DataTableToExcel-2-Customer-Report.xlsx";
-            d.SaveAsFile(filePath);
+            &nbsp;&nbsp;// Specify the file path where you want to save the Excel file
+            &nbsp;&nbsp;string filePath = "DataTableToExcel-2-Customer-Report.xlsx";
+            &nbsp;&nbsp;d.SaveAsFile(filePath);
             }
         </code>
         <p>
@@ -263,35 +273,21 @@
             mailingReportDataTable.Rows.Add(new RowStyle { FontBold = true, AlignmentVertical = XLAlignmentVerticalValues.Center }, "Branch", "Name", "Email", "Mobile", "Membership Created Date", "Membership", "Status", "Start Date", "End Date", "Roll Over", "Reason", "Notes", "Expired/Terminated Date");
 
             // Add data rows to mailingReportDataTable
-            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "13-03-2023
-            <br>06:02 AM", "AppleDiscount33", "Terminated", "13-03-2023", "13-03-2273", "No", "Reason not given", "N/A", "26-09-2023
-            <br>02:46 PM");
-            mailingReportDataTable.Rows.Add("Branch 1", "Sy Mehr", "sqmehr@yopmail.com", "+92 3345 045595", "26-04-2022
-            <br>09:24 AM", "Crossfit Membership - Copy 2", "Terminated", "26-04-2022", "26-04-2023", "Yes", "Reason not given", "N/A", "15-03-2023
-            <br>10:30 AM");
-            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "13-03-2023
-            <br>06:07 AM", "Crossfit Membership - 2", "Terminated", "13-03-2023", "13-03-2024", "Yes", "Reason not given", "N/A", "13-03-2023
-            <br>06:53 AM");
-            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "10-03-2023
-            <br>01:30 PM", "WG - 12 Months x 4 $59.99", "Terminated", "10-03-2023", "06-04-2023", "Yes", "Reason not given", "N/A", "10-03-2023
-            <br>01:32 PM");
-            mailingReportDataTable.Rows.Add("London", "shani 001", "shani66@yopmail.com", "N/A", "10-03-2023
-            <br>10:25 AM", "interval", "Terminated", "10-03-2023", "10-03-2024", "No", "Reason not given", "N/A", "10-03-2023
-            <br>12:15 PM");
-            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "10-03-2023
-            <br>11:53 AM", "Crossfit Membership", "Terminated", "10-03-2023", "10-03-2024", "Yes", "Reason not given", "N/A", "10-03-2023
-            <br>11:59 AM");
-            mailingReportDataTable.Rows.Add("London Branch", "Ham Dard", "hamdard@yopmail.com", "N/A", "06-01-2023
-            <br>11:28 AM", "12 month winter package - 1", "Terminated", "06-01-2023", "06-01-2024", "Yes", "Reason not given", "N/A", "06-01-2023
-            <br>01:34 PM");
+            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "13-03-2023 06:02 AM", "AppleDiscount33", "Terminated", "13-03-2023", "13-03-2273", "No", "Reason not given", "N/A", "26-09-2023 02:46 PM");
+            mailingReportDataTable.Rows.Add("Branch 1", "Sy Mehr", "sqmehr@yopmail.com", "+92 3345 045595", "26-04-2022 09:24 AM", "Crossfit Membership - Copy 2", "Terminated", "26-04-2022", "26-04-2023", "Yes", "Reason not given", "N/A", "15-03-2023 10:30 AM");
+            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "13-03-2023 06:07 AM", "Crossfit Membership - 2", "Terminated", "13-03-2023", "13-03-2024", "Yes", "Reason not given", "N/A", "13-03-2023 06:53 AM");
+            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "10-03-2023 01:30 PM", "WG - 12 Months x 4 $59.99", "Terminated", "10-03-2023", "06-04-2023", "Yes", "Reason not given", "N/A", "10-03-2023 01:32 PM");
+            mailingReportDataTable.Rows.Add("London", "shani 001", "shani66@yopmail.com", "N/A", "10-03-2023 10:25 AM", "interval", "Terminated", "10-03-2023", "10-03-2024", "No", "Reason not given", "N/A", "10-03-2023 12:15 PM");
+            mailingReportDataTable.Rows.Add("Branch 1", "Babar Hassan", "babar@yopmail.com", "+442071773406", "10-03-2023 11:53 AM", "Crossfit Membership", "Terminated", "10-03-2023", "10-03-2024", "Yes", "Reason not given", "N/A", "10-03-2023 11:59 AM");
+            mailingReportDataTable.Rows.Add("London Branch", "Ham Dard", "hamdard@yopmail.com", "N/A", "06-01-2023 11:28 AM", "12 month winter package - 1", "Terminated", "06-01-2023", "06-01-2024", "Yes", "Reason not given", "N/A", "06-01-2023 01:34 PM");
 
             using (var d = ExcelBuilder.Datasets(excelTable1, mailingReportDataTable).Build())
             {
-            var column = excelTableMailingReport.GetColumn("Personal Information");
-            excelTableMailingReport.GetColumn(column.EndColumnNumber).ColumnStyle.RightBorder = XLBorderStyleValues.Double;
-            // Specify the file path where you want to save the Excel file
-            string filePath = "DataTableToExcel-3-Mailing-List-Report.xlsx";
-            d.SaveAsFile(filePath);
+            &nbsp;&nbsp;var column = excelTableMailingReport.GetColumn("Personal Information");
+            &nbsp;&nbsp;excelTableMailingReport.GetColumn(column.EndColumnNumber).ColumnStyle.RightBorder = XLBorderStyleValues.Double;
+            &nbsp;&nbsp;// Specify the file path where you want to save the Excel file
+            &nbsp;&nbsp;string filePath = "DataTableToExcel-3-Mailing-List-Report.xlsx";
+            &nbsp;&nbsp;d.SaveAsFile(filePath);
             }
 
             // In this code snippet, two ExcelTable instances, `excelTable1` and `mailingReportDataTable`, are created.
@@ -365,9 +361,9 @@
 
             using (var d = ExcelBuilder.Datasets(excelTable2, excelTable3, excelTable4).Build())
             {
-            // Specify the file path where you want to save the Excel file
-            string filePath = "DataTableToExcel-4-All-Sales-Detail-By-Customer-Report.xlsx";
-            d.SaveAsFile(filePath);
+            &nbsp;&nbsp;// Specify the file path where you want to save the Excel file
+            &nbsp;&nbsp; string filePath = "DataTableToExcel-4-All-Sales-Detail-By-Customer-Report.xlsx";
+            &nbsp;&nbsp; d.SaveAsFile(filePath);
             }
 
 
@@ -450,9 +446,9 @@
             //Save the Excel package to a file
             using (var d = ExcelBuilder.Datasets(excelPaymentSummary, excelPaymentSummary1, excelPaymentSummary2).Build())
             {
-            // Specify the file path where you want to save the Excel file
-            string filePath = "DataTableToExcel-5-Payment-Summary.xlsx";
-            d.SaveAsFile(filePath);
+            &nbsp;&nbsp;// Specify the file path where you want to save the Excel file
+            &nbsp;&nbsp; string filePath = "DataTableToExcel-5-Payment-Summary.xlsx";
+            &nbsp;&nbsp; d.SaveAsFile(filePath);
             }
 
 
@@ -481,10 +477,10 @@
         <code>
             using (var d = ExcelBuilder.Datasets(new Worksheet("SimpleReport", simpleexcelTable), new Worksheet("allCustomerReport", excelTable), new Worksheet("mailingListReport", mailingReportDataTable), new Worksheet("AllSalesDetailReport", excelTable2, excelTable3, excelTable4), new Worksheet("Payment-Summary", excelPaymentSummary, excelPaymentSummary1, excelPaymentSummary2)).Build())
             {
-            // Specify the file path where you want to save the Excel file
-            string filePath = "composit-report.xlsx";
-            excelPaymentSummary1.GetColumn("column1").ColumnStyle.BackroundColor = XLColor.Blue;
-            d.SaveAsFile(filePath);
+            &nbsp;&nbsp; // Specify the file path where you want to save the Excel file
+            &nbsp;&nbsp;string filePath = "composit-report.xlsx";
+            &nbsp;&nbsp;excelPaymentSummary1.GetColumn("column1").ColumnStyle.BackroundColor = XLColor.Blue;
+            &nbsp;&nbsp;d.SaveAsFile(filePath);
             }
         </code>
 
@@ -571,7 +567,7 @@
         <div class="navbar navbar-expand-lg bg-body-tertiary p-4">
             <div class="container">
                 <div>
-                    © 2023 <a href="https://goworkpro.com"> GoWorkPro</a>. All rights reserved. ExcelBuilder is a trademark of GoWorkPro. Unauthorized use or reproduction of this software is prohibited.
+                    ï¿½ 2023 <a href="https://goworkpro.com"> GoWorkPro</a>. All rights reserved. ExcelBuilder is a trademark of GoWorkPro. Unauthorized use or reproduction of this software is prohibited.
                 </div>
             </div>
         </div>
